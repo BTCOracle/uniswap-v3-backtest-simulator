@@ -1,0 +1,124 @@
+:root {
+  --sidebar-row: 4;
+  --sidebar-sticky-position: 60px;
+  --sidebar-sub-container-background-light: rgba(175,129,228,.05);
+  --sidebar-sub-container-background-dark: transparent;
+  --sidebar-sub-container-background: var(--sidebar-sub-container-background-light);
+  --column-height: calc(var(--window-height) / 115);
+}
+
+.pool-search {
+  grid-column: 2 / span 11;
+  grid-row: var(--sidebar-row);
+  height: 100px;
+  position: sticky;
+  top: var(--sidebar-sticky-position);
+  z-index: 99999;
+}
+
+.sidebar {
+  grid-column: 2 / span 11;
+  grid-row: calc(var(--sidebar-row));
+  margin-top: calc(110px);
+  height: fit-content;
+  padding-top: 5px;
+  padding-bottom: 20px; 
+  position: sticky;
+  top: calc( var(--sidebar-sticky-position) + 110px);
+  background-color: var(--dashboard-section-background);
+  max-height: calc(var(--window-height) - 220px);
+  overflow-y: scroll;
+}
+
+
+.sub-container {
+  background-color: var(--sidebar-sub-container-background);
+  border: var(--border-color);
+  border-radius: 15px;
+  box-shadow:  var(--inner-glow);
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding-bottom: 8px;
+  padding-top: 5px;
+}
+
+.input-container {
+  text-align: center;
+}
+
+.input-label {
+  margin-top: 3px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.default-input {
+  width: calc(100% - 40px);
+  height: 30px;
+}
+
+.toggle-input {
+  width: calc(100% - 85px);
+  height: 25px;
+  font-size: 14px;
+}
+
+.toggle-button {
+  box-shadow: -1px -1px 1px #fff, 1px 1px 1px #babecc;
+  margin: 5px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  font-size:  16px;
+  height: 20px;
+  width: 30px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 0;
+  padding-bottom: 2.4px;
+  border-radius: 15px;
+}
+
+.toggle-img {
+  width: 14px;
+  height: 14px; 
+  margin-top: 2px;
+}
+
+.hedging-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+
+}
+
+.hedging-arrow {
+  border: .5px solid black;
+  border-radius: 50% 50%;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+}
+
+.strategy-amount-type-button {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  
+}
+
+.strategy-amount-type-button button {
+  color: var(--font-color);
+  margin: 5px;
+  height: 25px;
+  width: 25px;
+}

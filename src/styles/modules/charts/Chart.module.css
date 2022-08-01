@@ -1,0 +1,17 @@
+.chart-container {
+  background-color: var(--semi-transparent-background);
+}
+
+.mouse-over-container {
+  fill: transparent;
+  opacity: 0.2;
+  stroke-opacity: 0;
+}
+
+.y-axis-label {
+  font-size: 12px;
+  fill: var(--font-color);
+  stroke: none;
+  font-weight: 400;
+}
+

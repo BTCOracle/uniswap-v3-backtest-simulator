@@ -1,0 +1,58 @@
+:root {
+  --pool-over-container-row-span: 14;
+}
+
+.pool-overview-container {
+  grid-row: 2 / span var(--pool-over-container-row-span);
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  grid-row-gap: 0.5em;
+
+}
+
+.title {
+  grid-row: 1 / span 1;
+}
+
+.chart-container {
+  grid-row: 2 / span 9;
+  display: flex;
+}
+
+.chart {
+  height: 100%;
+  width: 40%;
+  margin-right: 3%;
+}
+
+.pool-stats-container {
+  grid-row: 2 / span 9;
+  width: 20%;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-row-gap: 0.2em;
+
+}
+
+.stat-container {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  color: var(--font-color);
+
+}
+
+.stat-label {
+  font-size: 11px;
+  justify-content: left;
+  padding-left: 0.5em;
+}
+
+.stat-1, .stat-label-1, .stat-help-1 { grid-row: 1 / span 1; }
+.stat-2, .stat-label-2, .stat-help-2 { grid-row: 2 / span 1; }
+.stat-3, .stat-label-3, .stat-help-3 { grid-row: 3 / span 1; }
+
+.stat-1, .stat-2, .stat-3 { grid-column: 1 / span 4; }
+.stat-label-1, .stat-label-2, .stat-label-3 { grid-column: 5 / span 4; }
+

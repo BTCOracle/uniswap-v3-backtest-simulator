@@ -1,0 +1,63 @@
+.toggle-buttons-flex-container, .button-list-flex-container {
+  display: flex;
+  align-items: bottom;
+  justify-content: space-around;
+  font-size: 14px; 
+  font-weight: 500;
+  /* margin-bottom: 5px; */
+ 
+}
+
+.toggle-buttons-flex-container button {
+  width: 100px;
+  height: 20px;
+  font-size: 11px;
+}
+
+.toggle-button{
+  padding: 5px;
+  width: 120px;
+  height: 25px;
+  font-size: 10px;
+  border-radius: 15px;
+  margin-right: 5px;
+
+}
+
+.toggle-button-selected{
+  padding: 5px;
+  width: 120px;
+  height: 25px;
+  font-size: 10px;
+  border-radius: 15px;
+  margin-right: 5px;
+  background-color: var(--semi-transparent-background);
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #f7f5fe;
+}
+
+.toggle-button-selected:hover {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #f7f5fe;
+}
+
+.button-list-grid {
+  margin: 5px;
+  width: 180px;
+  height: 20px;
+  z-index: 999;
+  font-size: 11px;
+}
+
+.button-list-flex-selected {
+  background-color: var(--semi-transparent-background);
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #f7f5fe;
+}
+
+.button-list-flex, .button-list-flex-selected {
+  font-size: 10px;
+  height: 25px;
+  width: 100px;
+  margin: 5px;
+  height: 20px;
+  z-index: 999;
+  text-align: center;
+}

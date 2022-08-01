@@ -1,0 +1,28 @@
+.mouse-over-container {
+  fill: transparent;
+  opacity: .2;
+  stroke-opacity: 0;
+}
+
+.mouse-over-marker {
+  fill: transparent;
+}
+
+.mouse-over-marker-line {
+  stroke-width: 1px;
+  stroke: #af81e4; 
+  stroke-opacity: 1;
+  stroke-dasharray: 2 2;
+}
+
+.mouse-over-text-container {
+  
+}
+
+.mouse-over-text {
+  z-index: 9999;
+  font-size: 11px;
+  font-weight: 400;
+  fill: var(--font-color);
+  stroke: none;
+}

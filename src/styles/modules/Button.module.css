@@ -1,0 +1,62 @@
+button {
+  box-shadow: var(--button-border);
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--font-color);
+}
+
+button:hover {
+  box-shadow: var(--button-border-hover);
+  border: var(--button-border);
+}
+
+button:active {
+  box-shadow: inset -1px -1px 1px #fff, inset 1px 1px 1px #babecc;
+}
+
+
+button.round {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.toggle-button {
+  margin: 5px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  font-size:  16px;
+  height: 20px;
+  width: 30px;
+  padding: 0;
+  padding-bottom: 2.4px;
+  border-radius: 15px;
+}
+
+.toggle-img {
+  width: 15px;
+  height: 15px; 
+  margin-top: 2px;
+}
+
+.refresh-button {
+  margin: 5px 5px 5px 10px;
+}
+
+.refresh-img {
+  width: 14px;
+  height: 14px;
+  margin-top: 3px;
+}
+
+.crement-img {
+  width: 8;
+  height: 8px;
+  /* margin-top: 3px; */
+}

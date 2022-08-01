@@ -1,0 +1,15 @@
+:root {
+  --candle-green: #9bd8c8;
+  --candle-red: rgb(255, 102, 102);
+
+}
+
+.candle-green { 
+  fill: var(--candle-green);
+  stroke: var(--candle-green);
+}
+
+.candle-red {
+  fill: var(--candle-red);
+  stroke: var(--candle-red);
+}
