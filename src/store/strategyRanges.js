@@ -11,3 +11,5 @@ const initialState ={type: "amount", strategies: [
   }, 
   {id: "S2", name: "Strategy 2", color: chartColors['uniswap'].S2, 
     inputs:  { min: { value: 1, name: "Min", label: "Min Range S1", percent: 0 }, max: {value: 1, name: "Max", label: "Max Range S2", percent: 0 } },
+    liquidityMultiplier: 1, selected: false, leverage: 1, rangesEditable: true, tokenratio: {token0: 0.5, token1: 0.5}, hedging: {type: "short", leverage: 1, amount: 0}
+  },
