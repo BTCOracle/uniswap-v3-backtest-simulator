@@ -23,3 +23,9 @@ const calcContrentratedLiquidityMultiplier = (min, max) => {
 }
 
 export const validateStrategyRangeValue = (strategy, key, value) => {
+  if (key === 'min') {
+    return strategy.inputs["max"].value > value ? true : false;
+  }
+  else if (key === 'max') {
+    return strategy.inputs["min"].value < value ? true : false;
+  }
