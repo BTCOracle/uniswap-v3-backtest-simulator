@@ -29,3 +29,6 @@ export const validateStrategyRangeValue = (strategy, key, value) => {
   else if (key === 'max') {
     return strategy.inputs["min"].value < value ? true : false;
   }
+
+  return false;
+}
