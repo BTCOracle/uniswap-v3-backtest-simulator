@@ -32,3 +32,10 @@ export const validateStrategyRangeValue = (strategy, key, value) => {
 
   return false;
 }
+
+export const updateStrategyRangeInputVal = (range) => {
+
+  return (dispatch, getState) => {
+    const baseDecimal = getState().pool.value.baseToken.decimals;
+    const quoteDecimal = getState().pool.value.quoteToken.decimals;
+    const feeTier = getState().pool.value.feeTier;
