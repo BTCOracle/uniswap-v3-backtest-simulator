@@ -39,3 +39,11 @@ export const updateStrategyRangeInputVal = (range) => {
     const baseDecimal = getState().pool.value.baseToken.decimals;
     const quoteDecimal = getState().pool.value.quoteToken.decimals;
     const feeTier = getState().pool.value.feeTier;
+    dispatch(setStrategyRangeInputVal({key: range.key, id: range.id, value: roundToNearestTick( range.value, feeTier, baseDecimal, quoteDecimal), percent: range.percent}));
+  }
+}
+
+export const strategyRanges = createSlice({
+  name: "strategyRanges",
+  initialState: initialState,
+  reducers: {
