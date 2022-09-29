@@ -47,3 +47,7 @@ export const strategyRanges = createSlice({
   name: "strategyRanges",
   initialState: initialState,
   reducers: {
+    crementStrategyRangeInputVal: (state, action) => {
+      const index = state.findIndex(i => i.id === action.payload.id);
+      if (index >= 0) {
+
