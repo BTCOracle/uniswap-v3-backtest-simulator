@@ -51,3 +51,8 @@ export const strategyRanges = createSlice({
       const index = state.findIndex(i => i.id === action.payload.id);
       if (index >= 0) {
 
+        const key = action.payload.key;
+        const crement = action.payload.crement;
+        const newValue = parseFloat(state[index].inputs[key].value) + parseFloat(crement);
+
+        if (validateStrategyRangeValue(state[index], key, newValue)) {
