@@ -56,3 +56,7 @@ export const strategyRanges = createSlice({
         const newValue = parseFloat(state[index].inputs[key].value) + parseFloat(crement);
 
         if (validateStrategyRangeValue(state[index], key, newValue)) {
+          state[index].liquidityMultiplier = calcContrentratedLiquidityMultiplier(state[index].inputs['min'].value, state[index].inputs['max'].value);
+        }
+      }
+    
