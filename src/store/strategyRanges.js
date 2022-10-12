@@ -61,3 +61,16 @@ export const strategyRanges = createSlice({
       }
     
     },
+    setStrategyRangeType: (state, action) => {
+      state.type = action.payload;
+    }, 
+    toggleStrategyRangeInputVals: (state, action) => {
+
+      if (action.payload.baseToken) {
+
+        const currentPrice = action.payload.baseToken.currentPrice;
+        const baseDecimal = action.payload.baseToken.decimals;
+        const quoteDecimal = action.payload.quoteToken.decimals;
+        const feeTier = action.payload.feeTier;
+
+        const max1 = 1 / state.strategies[0].inputs["min"].value;
