@@ -82,3 +82,10 @@ export const strategyRanges = createSlice({
 
         s1Min = roundToNearestTick(min1, feeTier, baseDecimal, quoteDecimal);
         s1Max = roundToNearestTick(max1, feeTier, baseDecimal, quoteDecimal);
+        s2Min = roundToNearestTick(min2, feeTier, baseDecimal, quoteDecimal);
+        s2Max = roundToNearestTick(max2, feeTier, baseDecimal, quoteDecimal);
+
+        state.strategies[0].inputs["min"].value = s1Min;
+        state.strategies[0].inputs["max"].value = s1Max;
+        state.strategies[1].inputs["min"].value = s2Min;
+        state.strategies[1].inputs["max"].value = s2Max;
