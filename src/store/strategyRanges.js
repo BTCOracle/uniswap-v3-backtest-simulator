@@ -107,3 +107,5 @@ export const strategyRanges = createSlice({
 
         const currentPrice = action.payload.baseToken.currentPrice;
         const baseDecimal = action.payload.baseToken.decimals;
+        const quoteDecimal = action.payload.quoteToken.decimals;
+        const std = action.payload.std;
