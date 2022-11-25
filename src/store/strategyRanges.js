@@ -109,3 +109,5 @@ export const strategyRanges = createSlice({
         const baseDecimal = action.payload.baseToken.decimals;
         const quoteDecimal = action.payload.quoteToken.decimals;
         const std = action.payload.std;
+        const feeTier = action.payload.feeTier;
+        let s1Min, s1Max, s2Min, s2Max;
