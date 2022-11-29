@@ -111,3 +111,5 @@ export const strategyRanges = createSlice({
         const std = action.payload.std;
         const feeTier = action.payload.feeTier;
         let s1Min, s1Max, s2Min, s2Max;
+
+        if (!isNaN(std) && std === 1) { 
