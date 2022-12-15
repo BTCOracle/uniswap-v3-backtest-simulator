@@ -113,3 +113,23 @@ export const strategyRanges = createSlice({
         let s1Min, s1Max, s2Min, s2Max;
 
         if (!isNaN(std) && std === 1) { 
+
+          s1Min = roundToNearestTick(currentPrice * 0.9, feeTier, baseDecimal, quoteDecimal);
+          s1Max = roundToNearestTick(currentPrice * 1.1, feeTier, baseDecimal, quoteDecimal);
+          s2Min = roundToNearestTick(currentPrice * 1.1, feeTier, baseDecimal, quoteDecimal);
+          s2Max = roundToNearestTick(currentPrice * 1.2, feeTier, baseDecimal, quoteDecimal);
+        }
+        else {
+          
+          const stdP = (std / currentPrice) * 100;
+          const multiplier = stdP < 2 ? 8 : 1;
+
+          s1Min = roundToNearestTick(currentPrice - (multiplier * std), feeTier, baseDecimal, quoteDecimal);
+          s1Max = roundToNearestTick(currentPrice + (multiplier * std), feeTier, baseDecimal, quoteDecimal);
+          s2Min = roundToNearestTick(currentPrice - ((multiplier * 2) * std), feeTier, baseDecimal, quoteDecimal);
+          s2Max = roundToNearestTick(currentPrice + ((multiplier * 2)  * std), feeTier, baseDecimal, quoteDecimal);
+        }
+
+        state.strategies[0].inputs["min"].value = s1Min;
+        state.strategies[0].inputs["max"].value = s1Max;
+        state.strategies[1].inputs["min"].value = s2Min;
