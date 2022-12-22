@@ -133,3 +133,11 @@ export const strategyRanges = createSlice({
         state.strategies[0].inputs["min"].value = s1Min;
         state.strategies[0].inputs["max"].value = s1Max;
         state.strategies[1].inputs["min"].value = s2Min;
+        state.strategies[1].inputs["max"].value = s2Max;
+
+        console.log(s1Min, s1Max, currentPrice);
+
+        state.strategies[0].inputs["min"].percent = round(((s1Min - currentPrice) / currentPrice) * 100, 1);
+        state.strategies[0].inputs["max"].percent = round(((s1Max - currentPrice) / currentPrice) * 100, 1);
+        state.strategies[1].inputs["min"].percent = round(((s2Min - currentPrice) / currentPrice) * 100, 1);
+        state.strategies[1].inputs["max"].percent = round(((s2Max - currentPrice) / currentPrice) * 100, 1);
