@@ -146,3 +146,5 @@ export const strategyRanges = createSlice({
         state.strategies[1].liquidityMultiplier = calcContrentratedLiquidityMultiplier(state.strategies[1].inputs['min'].value, state.strategies[1].inputs['max'].value);
 
       }
+
+    },
