@@ -148,3 +148,4 @@ export const strategyRanges = createSlice({
       }
 
     },
+    setStrategyRangeInputVal: (state, action) => {
