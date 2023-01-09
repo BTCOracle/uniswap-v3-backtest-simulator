@@ -149,3 +149,10 @@ export const strategyRanges = createSlice({
 
     },
     setStrategyRangeInputVal: (state, action) => {
+
+      const index = state.strategies.findIndex(i => i.id === action.payload.id);
+      if (index >= 0) {
+        const key = action.payload.key;
+        const value = action.payload.value;
+        state.strategies[index].inputs[key].value = value;
+        state.strategies[index].inputs[key].percent = action.payload.percent;
