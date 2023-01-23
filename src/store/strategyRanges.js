@@ -170,3 +170,8 @@ export const strategyRanges = createSlice({
         state.strategies[index].inputs[key].value = action.payload.value;
         state.strategies[index].liquidityMultiplier = calcContrentratedLiquidityMultiplier(state.strategies[index].inputs['min'].value, state.strategies[index].inputs['max'].value);
       }
+    },
+    setStrategyRangeSelected: (state, action) => {
+      const index = state.strategies.findIndex(i => i.id === action.payload);
+      if (index >=0) {
+        state.strategies[index].selected = state.strategies[index].selected === true ? false : true;
