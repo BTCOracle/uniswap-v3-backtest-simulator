@@ -175,3 +175,11 @@ export const strategyRanges = createSlice({
       const index = state.strategies.findIndex(i => i.id === action.payload);
       if (index >=0) {
         state.strategies[index].selected = state.strategies[index].selected === true ? false : true;
+      }
+    },
+    setStrategyLeverage: (state, action) => {
+      const index = state.strategies.findIndex(i => i.id === action.payload.id);
+      if (index >=0) {
+        state.strategies[index].leverage = parseFloat(action.payload.leverage);
+      }
+    },
