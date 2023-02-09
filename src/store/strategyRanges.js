@@ -188,3 +188,8 @@ export const strategyRanges = createSlice({
       const index = state.strategies.findIndex(i => i.id === action.payload.id);
       if (index >= 0) {
 
+        state.strategies[index].hedging.type = action.payload.type;
+      }
+    }, 
+    setStrategyHedgingLeverage: (state, action) => {
+      const index = state.strategies.findIndex(i => i.id === action.payload.id);
