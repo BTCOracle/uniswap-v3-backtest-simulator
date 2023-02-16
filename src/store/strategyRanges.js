@@ -193,3 +193,15 @@ export const strategyRanges = createSlice({
     }, 
     setStrategyHedgingLeverage: (state, action) => {
       const index = state.strategies.findIndex(i => i.id === action.payload.id);
+      if (index >= 0) {
+        state.strategies[index].hedging.leverage = parseFloat(action.payload.leverage);
+      }
+    }, 
+    setStrategyHedgingAmount: (state, action) => {
+      const index = state.strategies.findIndex(i => i.id === action.payload.id);
+      if (index >= 0) {
+        state.strategies[index].hedging.amount = parseFloat(action.payload.amount);
+      }
+    }, 
+    setTokenRatio: (state, action) => {
+      const index = state.strategies.findIndex(i => i.id === action.payload.id);
