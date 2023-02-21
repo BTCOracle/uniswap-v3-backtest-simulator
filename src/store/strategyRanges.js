@@ -205,3 +205,6 @@ export const strategyRanges = createSlice({
     }, 
     setTokenRatio: (state, action) => {
       const index = state.strategies.findIndex(i => i.id === action.payload.id);
+      if (index >=0) {
+        state.strategies[index].tokenratio = action.payload.tokenratio;
+      }
