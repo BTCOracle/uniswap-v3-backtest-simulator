@@ -208,3 +208,7 @@ export const strategyRanges = createSlice({
       if (index >=0) {
         state.strategies[index].tokenratio = action.payload.tokenratio;
       }
+    },
+    setStrategyRangeColors: (state, action) => {
+      state.strategies.forEach((d, i) => {
+         state.strategies[i].color = chartColors[action.payload][d.id];
