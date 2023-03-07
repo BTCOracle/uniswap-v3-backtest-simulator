@@ -212,3 +212,9 @@ export const strategyRanges = createSlice({
     setStrategyRangeColors: (state, action) => {
       state.strategies.forEach((d, i) => {
          state.strategies[i].color = chartColors[action.payload][d.id];
+      });
+    }
+  }
+});
+
+export const selectStrategyRanges = state => state.strategyRanges.strategies;
