@@ -218,3 +218,12 @@ export const strategyRanges = createSlice({
 });
 
 export const selectStrategyRanges = state => state.strategyRanges.strategies;
+export const selectStrategyRangeType = state => state.strategyRanges.type;
+
+export const selectStrategyRangeById = createSelector([strategies => strategies, (strategies, id) => id], (strategies, id) => {
+  return strategies.find(d => d.id === id);
+});
+
+export const selectStrategyRangeTokenRatioById = createSelector([strategies => strategies, (strategies, id) => id], (strategies, id) => {
+ 
+  const strategy = strategies.find(d => d.id === id);
