@@ -227,3 +227,8 @@ export const selectStrategyRangeById = createSelector([strategies => strategies,
 export const selectStrategyRangeTokenRatioById = createSelector([strategies => strategies, (strategies, id) => id], (strategies, id) => {
  
   const strategy = strategies.find(d => d.id === id);
+  if (strategy) return strategy.tokenratio;
+});
+
+export const selectSelectedStrategyRanges = state => {
+  const selectedStrategies = [];
