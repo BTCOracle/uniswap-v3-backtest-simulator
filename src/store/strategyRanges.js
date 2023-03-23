@@ -232,3 +232,9 @@ export const selectStrategyRangeTokenRatioById = createSelector([strategies => s
 
 export const selectSelectedStrategyRanges = state => {
   const selectedStrategies = [];
+  state.strategyRanges.strategies.forEach(d => {
+    if (d.selected) { selectedStrategies.push(d) }
+  });
+  
+  return selectedStrategies;
+}
