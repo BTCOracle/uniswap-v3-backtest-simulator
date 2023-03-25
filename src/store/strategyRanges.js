@@ -238,3 +238,6 @@ export const selectSelectedStrategyRanges = state => {
   
   return selectedStrategies;
 }
+
+export const selectSelectedEditableStrategyRanges = state => {
+  const selectedStrategies = [];
