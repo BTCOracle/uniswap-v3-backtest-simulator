@@ -241,3 +241,11 @@ export const selectSelectedStrategyRanges = state => {
 
 export const selectSelectedEditableStrategyRanges = state => {
   const selectedStrategies = [];
+  state.strategyRanges.strategies.forEach(d => {
+    if (d.selected && d.rangesEditable) { selectedStrategies.push(d) }
+  });
+  
+  return selectedStrategies;
+}
+
+export const selectSelectedEditableTokenRatios = state => {
