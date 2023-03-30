@@ -249,3 +249,4 @@ export const selectSelectedEditableStrategyRanges = state => {
 }
 
 export const selectSelectedEditableTokenRatios = state => {
+  const selectedStrategies = [];
