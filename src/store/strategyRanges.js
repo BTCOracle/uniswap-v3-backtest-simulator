@@ -250,3 +250,8 @@ export const selectSelectedEditableStrategyRanges = state => {
 
 export const selectSelectedEditableTokenRatios = state => {
   const selectedStrategies = [];
+  state.strategyRanges.strategies.forEach(d => {
+    if (d.selected && d.rangesEditable) { selectedStrategies.push(d.tokenratio) }
+  });
+  
+  return selectedStrategies;
