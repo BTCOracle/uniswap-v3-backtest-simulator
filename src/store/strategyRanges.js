@@ -255,3 +255,7 @@ export const selectSelectedEditableTokenRatios = state => {
   });
   
   return selectedStrategies;
+}
+
+export const selectEditableStrategyRanges = state => {
+  const strategies = [];
