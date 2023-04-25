@@ -261,3 +261,18 @@ export const selectEditableStrategyRanges = state => {
   const strategies = [];
   state.strategyRanges.strategies.forEach(d => {
     if (d.rangesEditable) { strategies.push(d) }
+  });
+  
+  return strategies;
+}
+
+export const selectStrategyRangeMinValues = state => {
+  const strategyVals = [];
+  state.strategyRanges.strategies.forEach(d => {
+    if (d.selected && d.rangesEditable) strategyVals.push(d.inputs["min"].value);
+  });
+  
+  return strategyVals;
+}
+
+export const selectStrategyRangeMaxValues = state => {
