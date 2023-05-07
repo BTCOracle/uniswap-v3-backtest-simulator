@@ -278,3 +278,7 @@ export const selectStrategyRangeMinValues = state => {
 export const selectStrategyRangeMaxValues = state => {
   const strategyVals = [];
   state.strategyRanges.strategies.forEach(d => {
+    if (d.selected && d.rangesEditable) strategyVals.push(d.inputs["max"].value);
+  });
+  
+  return strategyVals;
