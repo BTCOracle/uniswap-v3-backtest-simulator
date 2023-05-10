@@ -282,3 +282,4 @@ export const selectStrategyRangeMaxValues = state => {
   });
   
   return strategyVals;
+}
