@@ -291,3 +291,6 @@ export const selectStrategyRangeMinMaxValues = state => {
   });
   
   return strategyVals;
+}
+
+export const { setStrategyRangeInputVal, setDefaultStrategyRangeInputVals, setStrategyLeverage, setStrategyRangeType,
