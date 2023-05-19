@@ -294,3 +294,6 @@ export const selectStrategyRangeMinMaxValues = state => {
 }
 
 export const { setStrategyRangeInputVal, setDefaultStrategyRangeInputVals, setStrategyLeverage, setStrategyRangeType,
+  crementStrategyRangeInputVal, toggleStrategyRangeInputVals, setStrategyRangeSelected, setStrategyRangeInputPerc,
+  setTokenRatio, setStrategyRangeColors, setStrategyHedgingAmount, setStrategyHedgingLeverage, setStrategyHedgingType} = strategyRanges.actions;
+
