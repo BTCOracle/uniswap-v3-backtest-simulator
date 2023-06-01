@@ -4,7 +4,7 @@
 # Creates commits from start_date to end_date with random intervals
 
 # Hardcoded date range
-START_DATE="2022-07-03"
+START_DATE="2022-08-02"
 END_DATE="2025-08-12"
 
 # Validate date format
@@ -27,25 +27,25 @@ fi
 echo "Creating fake history from $START_DATE to $END_DATE"
 
 # Check if required files exist
-if [ ! -f "backtest.mjs" ]; then
-    echo "Error: backtest.mjs file not found!"
+if [ ! -f "src/store/strategyRanges.js" ]; then
+    echo "Error: src/store/strategyRanges.js file not found!"
     exit 1
 fi
 
-if [ ! -f "backtest_v3.mjs" ]; then
-    echo "Creating empty backtest_v3.mjs file..."
-    touch backtest_v3.mjs
+if [ ! -f "src/store/strategyRanges.js" ]; then
+    echo "Creating empty src/store/strategyRanges.js file..."
+    touch src/store/strategyRanges.js
 fi
 
 # Get the total number of lines in the real file
-total_lines=$(wc -l < "backtest.mjs")
-echo "Total lines in backtest.mjs: $total_lines"
+total_lines=$(wc -l < "src/store/strategyRanges.js")
+echo "Total lines in src/store/strategyRanges.js: $total_lines"
 
 # Read the real file into an array
-mapfile -t lines < "backtest.mjs"
+mapfile -t lines < "src/store/strategyRanges.js"
 
 # Initialize the empty file
-> "backtest_v3.mjs"
+> "src/store/strategyRanges.js"
 
 # Calculate total days between start and end date
 total_days_span=$(( ($(date -d "$END_DATE" +%s) - $(date -d "$START_DATE" +%s)) / 86400 ))
@@ -88,13 +88,13 @@ while [ $current_line -lt $total_lines ]; do
     # Add the lines to the file
     for ((i=0; i<$lines_to_add; i++)); do
         if [ $current_line -lt $total_lines ]; then
-            echo "${lines[$current_line]}" >> "backtest_v3.mjs"
+            echo "${lines[$current_line]}" >> "src/store/strategyRanges.js"
             ((current_line++))
         fi
     done
     
     # Git operations with specific date
-    git add backtest_v3.mjs
+    git add src/store/strategyRanges.js
     GIT_AUTHOR_DATE="$commit_date" GIT_COMMITTER_DATE="$commit_date" git commit -m "Contract development update - added $lines_to_add lines"
     
     # Advance current date by random interval

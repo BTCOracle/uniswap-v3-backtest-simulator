@@ -24,3 +24,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # temp while developing perpetual
+init.sh
+update.sh
